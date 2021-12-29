@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="869.0" style="-fx-background-color: #d1c4e9;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.appfleet.controller.AppController">
+   <children>
+      <VBox layoutX="12.0" layoutY="207.0" prefHeight="327.0" prefWidth="130.0" spacing="20.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="RIGHT" />
+            <Label text="Car Id" />
+            <Label text="Fleet id" />
+            <Label prefHeight="18.0" prefWidth="53.0" text="Model" />
+            <Label prefHeight="18.0" prefWidth="52.0" text="Color" />
+            <Label text="Year of manufacture" />
+            <Label text="Number of spaces" />
+            <Label text="Max speed" />
+            <Label prefHeight="18.0" prefWidth="55.0" text="Price" />
+         </children>
+      </VBox>
+      <VBox layoutX="144.0" layoutY="30.0" prefHeight="52.0" prefWidth="199.0" spacing="5.0">
+         <children>
+            <TextField fx:id="tfId" opacity="0.85">
+               <effect>
+                  <Blend />
+               </effect></TextField>
+            <TextField fx:id="tfName" opacity="0.85" />
+         </children>
+      </VBox>
+      <VBox layoutX="142.0" layoutY="239.0" prefHeight="222.0" prefWidth="199.0" spacing="13.0">
+         <children>
+            <TextField fx:id="tfCarId" opacity="0.85" />
+            <TextField fx:id="tfcarfleetid" opacity="0.85" />
+            <TextField fx:id="tfModel" opacity="0.85" />
+            <TextField fx:id="tfColor" opacity="0.85" />
+            <TextField fx:id="tfYearOfManufacture" opacity="0.85" />
+            <TextField fx:id="tfNumberOfSpaces" opacity="0.85" />
+            <TextField fx:id="tfSpeed" opacity="0.85" />
+            <TextField fx:id="tfPrice" opacity="0.85" />
+         </children>
+      </VBox>
+      <TableView fx:id="tvFeels" layoutX="522.0" layoutY="30.0" onMouseClicked="#handleMouseAction" opacity="0.85" prefHeight="98.0" prefWidth="152.0">
+        <columns>
+          <TableColumn fx:id="colFeelId" prefWidth="75.0" text="Id" />
+          <TableColumn fx:id="colFeelName" prefWidth="75.0" text="Name" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tvCars" layoutX="371.0" layoutY="239.0" onMouseClicked="#handleMouseActionCar" opacity="0.85" prefHeight="327.0" prefWidth="450.0">
+        <columns>
+          <TableColumn fx:id="colCarId" prefWidth="39.20001220703125" text="CarId" />
+            <TableColumn fx:id="colModel" prefWidth="56.79998779296875" text="Model" />
+            <TableColumn fx:id="colColor" prefWidth="67.19998168945312" text="Color" />
+            <TableColumn fx:id="colYearOfManufacture" prefWidth="57.60003662109375" text="YearOfManufacture" />
+            <TableColumn fx:id="colNumberOfSpaces" prefWidth="56.800048828125" text="NumberOfSpaces" />
+            <TableColumn fx:id="colMaxSpeed" prefWidth="59.9998779296875" text="MaxSpeed" />
+            <TableColumn fx:id="colPrice" prefWidth="56.0" text="Price" />
+            <TableColumn fx:id="colCarFleetId" prefWidth="51.9998779296875" text="FleetId" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnInsert" layoutX="12.0" layoutY="101.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="26.0" prefWidth="97.0" text="Insert" />
+      <Button fx:id="btnUpdate" layoutX="126.0" layoutY="101.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="26.0" prefWidth="97.0" text="Update" />
+      <Button fx:id="btnDelete" layoutX="242.0" layoutY="101.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="26.0" prefWidth="97.0" text="Delete" />
+      <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="25.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@add.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="135.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@update.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="252.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@delet.png" />
+         </image>
+      </ImageView>
+      <VBox layoutX="13.0" layoutY="30.0" prefHeight="56.0" prefWidth="100.0">
+         <children>
+            <Label text="Id">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label />
+            <Label text="Name">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Button fx:id="btnInsertCar" layoutX="12.0" layoutY="539.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="26.0" prefWidth="97.0" text="Insert" />
+      <Button fx:id="btnUpdateCar" layoutX="126.0" layoutY="539.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="26.0" prefWidth="97.0" text="Update" />
+      <Button fx:id="btnDeleteCar" layoutX="242.0" layoutY="539.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="26.0" prefWidth="97.0" text="Delete" />
+      <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="25.0" layoutY="544.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@add.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="135.0" layoutY="545.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@update.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="252.0" layoutY="545.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@delet.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnCalculatingPrc" layoutX="12.0" layoutY="137.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="26.0" prefWidth="97.0" text="Calc" />
+      <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="25.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@dollar.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="tfCalcPrice" layoutX="521.0" layoutY="137.0" />
+      <Button fx:id="btnParam" layoutX="242.0" layoutY="136.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="26.0" prefWidth="97.0" text="Param" />
+      <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="252.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@param.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="tfParam" layoutX="521.0" layoutY="172.0" />
+      <Button fx:id="btnShowAll" layoutX="126.0" layoutY="137.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="26.0" prefWidth="97.0" text="Show all" />
+   </children>
+</AnchorPane>
